@@ -1,0 +1,20 @@
+services:
+  - type: worker
+    name: instagram-bot
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    plan: free
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: TELEGRAM_ADMIN_ID
+        sync: false
+      - key: INSTAGRAM_SESSION
+        sync: false
+      - key: VLESS_URL
+        sync: false
+      - key: BOT_USE_SAVED_USERS
+        value: "1"

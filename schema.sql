@@ -1,0 +1,5 @@
+CREATE TABLE IF NOT EXISTS bot_documents (
+    name TEXT PRIMARY KEY,
+    data JSONB NOT NULL,
+    updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);

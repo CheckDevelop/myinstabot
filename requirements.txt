@@ -1,0 +1,3 @@
+instagrapi
+psycopg[binary,pool]
+python-telegram-bot>=22,<23
